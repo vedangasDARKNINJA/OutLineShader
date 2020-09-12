@@ -3,7 +3,7 @@
 ## How does it work:
 The shader does its magic in the vertex shader function. where it uses the current vertex positions, multiplies it with a float __OutlineThickness_ and sets these new positions for a dummy object's vertex positions.
 
-This dummy object will have the color mentioned as __OutlineColor_ by the user in the fragment function.
+This dummy object will have the color mentioned as _\_OutlineColor_ by the user in the fragment function.
 
 This is for rendering the outline. Another pass is required for the actual object to render. Here the author has taken the surface shader approach and wrote the pass which renderes the actual object on top of it.
 
@@ -19,7 +19,7 @@ This is for rendering the outline. Another pass is required for the actual objec
 
 + **_MainTex**: Main texture that will be applied to the model;  
 + **_OutlineColor**: Color of the outline. 
-    - **Note:** that changing/Animating the color will only change the color to animate the alpha, use the __OutlineAlpha_ property.
+    - **Note:** that changing/Animating the color will only change the color to animate the alpha, use the _\_OutlineAlphaLerp_,_\_OutlineAlphaMin_ and _\_OutlineAlphaMax_ properties to control alpha.
 + **_OutlineThickness**: the thickness of the outline to for the object.
 + **_OutlineAlphaMin**: the minimum alpha for the outline.
 + **_OutlineAlphaMax**: the maximum alpha for the outline.
