@@ -10,7 +10,8 @@ This is for rendering the outline. Another pass is required for the actual objec
 
 ## Features Added:
 1. Cosine controlled fading alpha animation.
-2. Adjustable alpha for the outline.
+2. Adjustable minimum and maximum alpha.
+3. Manual Lerp option and using the frequency option is available.
 
 
 
