@@ -61,7 +61,7 @@
             {
                 float4 c =_OutlineColor;
                 float lerp = abs(_OutlineAlphaMax - _OutlineAlphaMin) * _OutlineAlphaLerp + _OutlineAlphaMin;
-                c.a = (1-_OutlineUseFrequency)*lerp + _OutlineUseFrequency*(0.5*abs(_OutlineAlphaMax - _OutlineAlphaMin)*(1+cos(_OutlineAlphaFrequency * _Time)) + _OutlineAlphaMin);
+                c.a = (1-_OutlineUseFrequency)*lerp + _OutlineUseFrequency*(0.5*abs(_OutlineAlphaMax - _OutlineAlphaMin)*(1+cos((_OutlineAlphaFrequency * _Time)/(abs(_OutlineAlphaMax - _OutlineAlphaMin))) + _OutlineAlphaMin);
                 return c;
             }
 
